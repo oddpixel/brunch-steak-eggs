@@ -7,7 +7,7 @@
     "lodash": "latest",
     "jquery": "1.11.0",
     "backbone": "latest",
-    "Backbone-Mediator": "latest"
+    "marionette": "latest"
   },
   "overrides": {
     "jquery": {
@@ -20,11 +20,10 @@
       },
       "main": "backbone.js"
     },
-    "Backbone-Mediator": {
+    "marionette": {
       "dependencies": {
         "backbone": "latest"
-      },
-      "main": "backbone-mediator.js"
+      }
     }
   }
 }

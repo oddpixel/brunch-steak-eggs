@@ -1,11 +1,13 @@
-var application = require('application')
+var app = require('application');
+var HomeView = require('views/HomeView');
 
 module.exports = Backbone.Router.extend({
-    routes: {
-        '': 'home'
-    },
-    
-    home: function() {
-        $('body').html(application.homeView.render().el)
-    }
-})
+	routes: {
+		'': 'home'
+	},
+		
+	home: function() {
+		homeView = new HomeView();
+		app.layout.content.show(homeView);
+	}
+});

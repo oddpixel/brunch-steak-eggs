@@ -1,6 +1,6 @@
 # Brunch with Steak and Eggs
 
-Brunch with Steak and Eggs is a [Brunch](http://brunch.io/) skeleton that utilizes [Bootstrap](http://getbootstrap.com/), [Backbone](http://backbonejs.org/), [Handlebars](http://handlebarsjs.com/), and [LESS](http://lesscss.org/). It also includes [Backbone.Mediator](https://github.com/chalbert/Backbone-Mediator) for Pub/Sub patterns.
+Brunch with Steak and Eggs is a [Brunch](http://brunch.io/) skeleton that utilizes [Bootstrap](http://getbootstrap.com/), [Backbone](http://backbonejs.org/), [Marionette](http://marionettejs.com/), [Handlebars](http://handlebarsjs.com/), and [LESS](http://lesscss.org/). It also includes [Backbone.Mediator](https://github.com/chalbert/Backbone-Mediator) for Pub/Sub patterns.
 
 ## Installation
 Skeleton install: `brunch new github:oddpixel/brunch-steak-eggs <your-project-name>`.
