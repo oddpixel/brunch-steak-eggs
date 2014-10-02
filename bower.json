@@ -6,8 +6,9 @@
     "console-polyfill": "latest",
     "lodash": "latest",
     "jquery": "1.11.0",
-    "backbone": "latest",
-    "marionette": "latest"
+    "backbone": "latest",    
+    "backbone.babysitter": "latest",
+    "marionette": "2.2.1"
   },
   "overrides": {
     "jquery": {
@@ -19,11 +20,6 @@
         "jquery": "1.11.0"
       },
       "main": "backbone.js"
-    },
-    "marionette": {
-      "dependencies": {
-        "backbone": "latest"
-      }
     }
   }
 }
