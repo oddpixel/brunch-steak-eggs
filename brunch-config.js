@@ -16,8 +16,8 @@ exports.config = {
 			joinTo: {
 				'js/app.js': /^app/,
 				'js/vendor.js': /^(vendor|bower_components)/,
-        'test/js/test.js': /^test[\\/](?!vendor)/,
-        'test/js/test-vendor.js': /^test[\\/](?=vendor)/
+				'test/js/test.js': /^test[\\/](?!vendor)/,
+				'test/js/test-vendor.js': /^test[\\/](?=vendor)/
 			},
 			order: {
 				before: [
@@ -25,11 +25,11 @@ exports.config = {
 					'bower_components/jquery/dist/jquery.js',
 				],
 				after: [
-          'vendor/js/bootstrap/tooltip.js',
-          'vendor/js/bootstrap/popover.js',
-          'vendor/js/bootstrap/collapse.js',
-          'vendor/js/bootstrap/transition.js',          
-          'test/vendor/js/test-helper.js'
+					'vendor/js/bootstrap/tooltip.js',
+					'vendor/js/bootstrap/popover.js',
+					'vendor/js/bootstrap/collapse.js',
+					'vendor/js/bootstrap/transition.js',
+					'test/vendor/js/test-helper.js'
 				]
 			}
 		},
