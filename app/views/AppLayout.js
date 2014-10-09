@@ -1,21 +1,66 @@
-var app = require('application');
-var HomeView = require('views/HomeView');
+App.module('AppLayout', function(AppLayout, App, Backbone, Marionette, $, _){
 
-module.exports = Backbone.Marionette.LayoutView.extend({
-	template: 'views/templates/appLayout',
+	AppLayout.Router = Marionette.AppRouter.extend({
+		appRoutes: {
+			'home': 'showHome',
+			'about': 'showAbout',
+			'contact': 'showContact'
+		}
+	});
 
-	el: 'body',
+	var API = {
+		showHome: function(){
+			console.log('Home shown');
+			App.AppLayout.HomeView.display(App.mainRegion.currentView.contentRegion);
+			// AppLayout.execute('set:active:header', 'about');
+		},
+		showAbout: function(){
+			console.log('About shown');
+			App.AppLayout.AboutView.display(App.mainRegion.currentView.contentRegion);
+		},
+		showContact: function(){
+			console.log('Contact shown');
+			App.AppLayout.ContactView.display(App.mainRegion.currentView.contentRegion);
+		}
+	};
 
-	regions: {
-		contentRegion: '#content'
-	},
+	App.on('home:show', function(){
+		AppLayout.navigate('home');
+		API.showHome();
+	});
+	App.on('about:show', function(){
+		AppLayout.navigate('about');
+		API.showAbout();
+	});
+	App.on('contact:show', function(){
+		AppLayout.navigate('contact');
+		API.showContact();
+	});
 
-	onShow: function(){
-		var homeView = new HomeView();
-		this.contentRegion.show(homeView);
-	},
+	App.addInitializer(function(){
+		new AppLayout.Router({
+			controller: API
+		});
+	});
 
-	initialize: function(options){
-		_this = this;
-	}
+
+	// View
+	var layout = Backbone.Marionette.LayoutView.extend({
+		template: 'appLayout',
+
+		regions: {
+			headerRegion: '#header',
+			contentRegion: '#content'
+		},
+
+		onShow: function(){
+			App.AppLayout.HeaderView.display(App.mainRegion.currentView.headerRegion);
+			App.AppLayout.HomeView.display(App.mainRegion.currentView.contentRegion);
+		}
+	});
+
+	AppLayout.display = function(region){
+		region.show( new layout() );
+	};
+  
 });

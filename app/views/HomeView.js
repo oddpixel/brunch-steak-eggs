@@ -1,6 +1,12 @@
-module.exports = Backbone.Marionette.ItemView.extend({
+App.module('AppLayout.HomeView', function(HomeView, App, Backbone, Marionette, $, _){
 
-	id: 'home-view',
+	var layout = Backbone.Marionette.ItemView.extend({
+		id: 'home-view',
+		template: 'home'
+	});
 
-	template: 'views/templates/home'
+	HomeView.display = function(region){
+		region.show( new layout() );
+	};
+	
 });

@@ -8,8 +8,8 @@ exports.config = {
 		assets: /(assets|test(\/|\\)assets)/
 	},
 	modules: {
-		wrapper: 'commonjs',
-		definition: 'commonjs'
+		wrapper: false,
+		definition: false
 	},
 	files: {
 		javascripts: {
@@ -25,6 +25,7 @@ exports.config = {
 					'bower_components/jquery/dist/jquery.js',
 				],
 				after: [
+					'vendor/js/marionette.handlebars/marionette.handlebars.js',
 					'vendor/js/bootstrap/tooltip.js',
 					'vendor/js/bootstrap/popover.js',
 					'vendor/js/bootstrap/collapse.js',
@@ -34,7 +35,6 @@ exports.config = {
 			}
 		},
 		stylesheets: {
-			defaultExtension: 'less',
 			joinTo: {
 				'css/app.css': /^(app|vendor|bower_components)/,
 				'test/css/test.css': /^test/
@@ -44,7 +44,6 @@ exports.config = {
 			}
 		},
 		templates: {
-			defaultExtension: 'hbs',
 			joinTo: 'js/app.js'
 		}
 	},

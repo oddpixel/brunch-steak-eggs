@@ -7,8 +7,8 @@
     "lodash": "latest",
     "jquery": "1.11.0",
     "backbone": "latest",    
-    "backbone.babysitter": "latest",
-    "marionette": "2.2.1"
+    "marionette": "2.2.1",
+    "handlebars": "latest"
   },
   "overrides": {
     "jquery": {

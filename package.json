@@ -9,7 +9,8 @@
     "url": ""
   },
   "engines": {
-    "node": "latest"
+    "node": "latest",
+    "npm": "latest"
   },
   "scripts": {
     "start": "brunch watch --server"
@@ -17,13 +18,9 @@
   "dependencies": {
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
-    "handlebars-brunch": "latest",
     "javascript-brunch": "latest",
     "less-brunch": "latest",
     "uglify-js-brunch": "latest",
     "read-components": "latest"
-  },
-  "devDependencies": {
-    "expect.js": "latest"
   }
 }
